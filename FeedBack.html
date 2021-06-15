@@ -1,0 +1,156 @@
+<!DOCTYPE html">
+<html">
+<head>
+<title>Feed Back</title>
+<link href="hamza.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<script>
+function phonenumber(inputtxt)
+{
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if(inputtxt.value.match(phoneno))
+     {
+	   return true;      
+	 }
+   else
+     {
+	   alert("Not a valid Phone Number");
+	   return false;
+     }
+}
+
+
+    function hamzanaveed() {
+        var name = document.forms["RegForm"]["Name"];
+        var email = document.forms["RegForm"]["Email"];
+        var phone = document.forms["RegForm"]["Telephone"];
+        var what = document.forms["RegForm"]["Subject"];
+        var password = document.forms["RegForm"]["Password"];
+        var address = document.forms["RegForm"]["Address"];
+  
+        if (name.value == "") {
+            window.alert("Please enter your name.");
+            name.focus();
+            return false;
+        }
+  
+        if (address.value == "") {
+            window.alert("Please enter your address.");
+            address.focus();
+            return false;
+        }
+  
+        if (email.value == "") {
+            window.alert(
+              "Please enter a valid e-mail address.");
+            email.focus();
+            return false;
+        }
+  
+        if (phonenumber.value == "") {
+            window.alert(
+              "Please enter your telephone number.");
+            phone.focus();
+            return false;
+        }
+  
+        if (password.value == "") {
+            window.alert("Please enter your password");
+            password.focus();
+            return false;
+        }
+  
+        if (what.selectedIndex < 1) {
+            alert("Select platform");
+            what.focus();
+            return false;
+        }
+  
+        return true;
+    }
+</script>
+
+<div id="Container">
+  <div id="Top">
+    <h1>
+	<img src="logo.gif" alt="HamzaLogo" width="153" height="63" class="logo" /><font size="5">Smart 
+	Guardian</font></h1>
+    <h2>Keep A Digital eye on your loved ones</h2>
+  </div>
+  <div id="TopLine">Welcome To Smart Guardian Official Website.</div>
+
+  
+  <div id="TopImage"><img src="top.jpg" alt="" width="1230" height="261" /></div>
+  <div id="InfoLine"><marquee>Assignment No 2 & 3 || Submitted By Hamza Naveed (SP18-BSE-055) || Usman Ali (SP18-BSE-078) || Rizwan Ramzan (SP18-BSE-063)  ||	 Waleed ullah Khan (FA17-BSE-039) || Submitted to Miss Bushra Mushtaq || COMSATS university Islamabad Abbottabad Campus ||</marquee></div>
+  <div id="MainText">
+    <div id="MainText-right" style="width: 803px; height: 228px">
+      <h1>Report Bugs Here?</h1>
+		<p>&nbsp;<body>
+    <h1 style="text-align: center;">Assignment No 4 Form Validation Checks</h1>
+		<p style="text-align: center;">&nbsp;</p>
+    <form name="RegForm" action="/submit.php" 
+          onsubmit="return hamzanaveed()" method="post">
+        <p>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<input type="text" 
+                        size="45" name="Name" />&nbsp;&nbsp;&nbsp;</p>
+        <br />
+        <p>Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<input type="text" 
+                           size="45" name="Address" /></p>
+        <br />
+        <p>E-mail Address:&nbsp;&nbsp;&nbsp;&nbsp; 
+		<input type="text" 
+                               size="45" name="Email" /></p>
+        <br />
+        <p>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<input type="text" 
+                            size="45" name="Password" /></p>
+        <br />
+        <p>Telephone:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<input type="text" 
+                             size="45" name="phonenumber" /></p>
+        <br />
+  
+        <p>
+            SELECT BUG Platform&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select type="text" value="" name="Subject">
+                <option>Smart Guardian</option>
+                <option>Smart Guardian Website</option>
+             
+            </select>
+        </p>
+        <br />
+        <br />
+        Report Feedback&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<textarea cols="48" 
+                               name="Comment" rows="4"> </textarea><p>
+            <input type="submit" 
+                   value="Send FeedBack" name="Submit" />
+        </p>
+		<p>
+            &nbsp;</p>
+    </form>
+</body></p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+		<p>
+		</p>
+		
+    </div>
+	<div id="MainText-left" style="width: 219px; height: 265px">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="About.html">About Us</a></li>
+			<li><a href="ContactUs.html">Contact Us</a></li>
+			<li><a href="Download.html">Download</a></li>
+			<li><a href="FeedBack.html">Feed Back</a></li>
+		</ul></div>
+  </div>
+  </div>
+</body>
+</html>
